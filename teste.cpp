@@ -33,6 +33,37 @@ void professor(){
 
 void aluno(){
 
+    //CORPO
+    glPushMatrix();
+    glTranslatef(0.0f,10.0f,-8.0f);
+    glScalef(35.0f,50.0f,7.0f);
+    glColor3f(0.0f,0.0f,0.0f);
+    glutSolidCube(1.0f);
+    glPopMatrix();
+
+    //CABEÇA
+    glPushMatrix();
+    glTranslatef(0.0f,45.0f,-8.0f);
+    glScalef(10.0f,10.0f,10.0f);
+    glColor3f(0.0f,1.0f,1.0f);
+    glutSolidSphere(1.0f,10,10);
+    glPopMatrix();
+
+    //BRAÇOS
+    glPushMatrix();
+    glTranslatef(-20.0f,15.0f,-8.0f);
+    glScalef(10.0f,30.0f,10.0f);
+    glColor3f(0.0f,1.0f,0.0f);
+    glutSolidCube(1.0f);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(20.0f,15.0f,-8.0f);
+    glScalef(10.0f,30.0f,10.0f);
+    glColor3f(0.0f,1.0f,0.0f);
+    glutSolidCube(1.0f);
+    glPopMatrix();
+
 }
 
 void mesa(){
@@ -77,7 +108,7 @@ void mesa(){
 
 void cadeira(){
 
-  //glRotatef(90.0f,0,1,0);
+//  glRotatef(90.0f,0,1,0);
   glTranslatef(0.0f,0.0f,0.0f);
 
   //ASSENTO
@@ -88,7 +119,7 @@ void cadeira(){
   glPopMatrix();
 
   //PES
-//  glRotatef(0.0f,0,0,0);
+  glRotatef(0.0f,0,0,0);
   glTranslatef(19.0f,-15.0f,-19.0f);
 
   glPushMatrix();
