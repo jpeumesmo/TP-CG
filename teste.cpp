@@ -244,15 +244,15 @@ void alunoEsp(){
         //CORPO
         glPushMatrix();
         glTranslatef(-19.0f,40.0f,-18.0f);
-        glScalef(17.5f,25.0f,3.5f);
+        glScalef(35.0f,50.0f,7.0f);
         glColor3f(0.0f,0.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         //CABEÇA
         glPushMatrix();
-        glTranslatef(-19.0f,70.0f,-18.0f);
-        glScalef(5.0f,5.0f,5.0f);
+        glTranslatef(-19.0f,74.0f,-18.0f);
+        glScalef(10.0f,10.0f,10.0f);
         glColor3f(1.0f,0.0f,0.0f);
         glutSolidSphere(1.0f,10,10);
         glPopMatrix();
@@ -260,14 +260,14 @@ void alunoEsp(){
         //BRAÇOS
         glPushMatrix();
         glTranslatef(-42.0f,40.0f,-18.0f);
-        glScalef(5.0f,15.0f,5.0f);
+        glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
         glTranslatef(4.0f,40.0f,-18.0f);
-        glScalef(5.0f,15.0f,5.0f);
+        glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
@@ -275,14 +275,14 @@ void alunoEsp(){
         //PERNAS
         glPushMatrix();
         glTranslatef(0.0f,5.0f,-18.0f);
-        glScalef(5.0f,15.0f,5.0f);
+        glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
         glTranslatef(10.0f,5.0f,-18.0f);
-        glScalef(5.0f,15.0f,5.0f);
+        glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
@@ -297,7 +297,7 @@ void alunoEsp(){
 
         //CABEÇA
         glPushMatrix();
-        glTranslatef(-19.0f,80.0f,-28.0f);
+        glTranslatef(-19.0f,78.0f,-28.0f);
         glScalef(10.0f,10.0f,10.0f);
         glColor3f(1.0f,0.0f,0.0f);
         glutSolidSphere(1.0f,10,10);
@@ -327,7 +327,7 @@ void alunoEsp(){
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(10.0f,15.0f,-28.0f);
+        glTranslatef(0.0f,15.0f,-28.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
@@ -343,7 +343,7 @@ void alunoEsp(){
 
         //CABEÇA
         glPushMatrix();
-        glTranslatef(-19.0f,90.0f,-38.0f);
+        glTranslatef(-19.0f,84.0f,-38.0f);
         glScalef(10.0f,10.0f,10.0f);
         glColor3f(1.0f,0.0f,0.0f);
         glutSolidSphere(1.0f,10,10);
@@ -366,14 +366,14 @@ void alunoEsp(){
 
         //PERNAS
         glPushMatrix();
-        glTranslatef(0.0f,25.0f,-38.0f);
+        glTranslatef(-25.0f,25.0f,-38.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(10.0f,25.0f,-38.0f);
+        glTranslatef(-12.5f,25.0f,-38.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
@@ -389,7 +389,7 @@ void alunoEsp(){
 
         //CABEÇA
         glPushMatrix();
-        glTranslatef(-19.0f,100.0f,-48.0f);
+        glTranslatef(-19.0f,88.0f,-48.0f);
         glScalef(10.0f,10.0f,10.0f);
         glColor3f(1.0f,0.0f,0.0f);
         glutSolidSphere(1.0f,10,10);
@@ -397,14 +397,14 @@ void alunoEsp(){
 
         //BRAÇOS
         glPushMatrix();
-        glTranslatef(-42.0f,70.0f,-48.0f);
+        glTranslatef(-42.0f,60.0f,-48.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(4.0f,70.0f,-48.0f);
+        glTranslatef(4.0f,60.0f,-48.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
@@ -412,14 +412,14 @@ void alunoEsp(){
 
         //PERNAS
         glPushMatrix();
-        glTranslatef(0.0f,35.0f,-48.0f);
+        glTranslatef(-25.0f,25.0f,-48.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(10.0f,35.0f,-48.0f);
+        glTranslatef(-12.5f,25.0f,-48.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
@@ -435,7 +435,7 @@ void alunoEsp(){
 
         //CABEÇA
         glPushMatrix();
-        glTranslatef(-19.0f,110.0f,-58.0f);
+        glTranslatef(-19.0f,94.0f,-58.0f);
         glScalef(10.0f,10.0f,10.0f);
         glColor3f(1.0f,0.0f,0.0f);
         glutSolidSphere(1.0f,10,10);
@@ -443,14 +443,14 @@ void alunoEsp(){
 
         //BRAÇOS
         glPushMatrix();
-        glTranslatef(-42.0f,90.0f,-58.0f);
+        glTranslatef(-42.0f,70.0f,-58.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(4.0f,90.0f,-58.0f);
+        glTranslatef(4.0f,70.0f,-58.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
@@ -458,19 +458,19 @@ void alunoEsp(){
 
         //PERNAS
         glPushMatrix();
-        glTranslatef(0.0f,55.0f,-58.0f);
+        glTranslatef(-25.0f,25.0f,-58.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(10.0f,55.0f,-58.0f);
+        glTranslatef(-12.5f,25.0f,-58.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
-    }else if (frame >=90 && frame < 95){
+   }else if (frame >=90 && frame < 95){
         //CORPO
         glPushMatrix();
         glTranslatef(-19.0f,65.0f,-68.0f);
@@ -481,7 +481,7 @@ void alunoEsp(){
 
         //CABEÇA
         glPushMatrix();
-        glTranslatef(-19.0f,120.0f,-68.0f);
+        glTranslatef(-19.0f,98.0f,-68.0f);
         glScalef(10.0f,10.0f,10.0f);
         glColor3f(1.0f,0.0f,0.0f);
         glutSolidSphere(1.0f,10,10);
@@ -489,14 +489,14 @@ void alunoEsp(){
 
         //BRAÇOS
         glPushMatrix();
-        glTranslatef(-42.0f,100.0f,-68.0f);
+        glTranslatef(-42.0f,70.0f,-68.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(4.0f,100.0f,-68.0f);
+        glTranslatef(4.0f,70.0f,-68.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
@@ -504,14 +504,14 @@ void alunoEsp(){
 
         //PERNAS
         glPushMatrix();
-        glTranslatef(0.0f,65.0f,-68.0f);
+        glTranslatef(-25.0f,25.0f,-68.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(10.0f,65.0f,-68.0f);
+        glTranslatef(-12.5f,25.0f,-68.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
@@ -527,7 +527,7 @@ void alunoEsp(){
 
         //CABEÇA
         glPushMatrix();
-        glTranslatef(-19.0f,130.0f,-78.0f);
+        glTranslatef(-19.0f,104.0f,-78.0f);
         glScalef(10.0f,10.0f,10.0f);
         glColor3f(1.0f,0.0f,0.0f);
         glutSolidSphere(1.0f,10,10);
@@ -535,14 +535,14 @@ void alunoEsp(){
 
         //BRAÇOS
         glPushMatrix();
-        glTranslatef(-42.0f,110.0f,-78.0f);
+        glTranslatef(-42.0f,70.0f,-78.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(4.0f,110.0f,-78.0f);
+        glTranslatef(4.0f,70.0f,-78.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
@@ -550,14 +550,14 @@ void alunoEsp(){
 
         //PERNAS
         glPushMatrix();
-        glTranslatef(0.0f,75.0f,-78.0f);
+        glTranslatef(-30.0f,30.0f,-78.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(10.0f,75.0f,-78.0f);
+        glTranslatef(-8.0f,30.0f,-78.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
@@ -573,7 +573,7 @@ void alunoEsp(){
 
         //CABEÇA
         glPushMatrix();
-        glTranslatef(-19.0f,140.0f,-88.0f);
+        glTranslatef(-19.0f,108.0f,-88.0f);
         glScalef(10.0f,10.0f,10.0f);
         glColor3f(1.0f,0.0f,0.0f);
         glutSolidSphere(1.0f,10,10);
@@ -581,29 +581,31 @@ void alunoEsp(){
 
         //BRAÇOS
         glPushMatrix();
-        glTranslatef(-42.0f,120.0f,-88.0f);
+        glTranslatef(-42.0f,70.0f,-88.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(4.0f,120.0f,-88.0f);
+        glTranslatef(4.0f,70.0f,-88.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
+
 
         //PERNAS
+        //PERNAS
         glPushMatrix();
-        glTranslatef(0.0f,95.0f,-88.0f);
+        glTranslatef(-30.0f,35.0f,-88.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(10.0f,95.0f,-88.0f);
+        glTranslatef(-8.0f,35.0f,-88.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
@@ -619,7 +621,7 @@ void alunoEsp(){
 
         //CABEÇA
         glPushMatrix();
-        glTranslatef(-19.0f,70.0f,-98.0f);
+        glTranslatef(-19.0f,130.0f,-98.0f);
         glScalef(10.0f,10.0f,10.0f);
         glColor3f(1.0f,0.0f,0.0f);
         glutSolidSphere(1.0f,10,10);
@@ -627,14 +629,14 @@ void alunoEsp(){
 
         //BRAÇOS
         glPushMatrix();
-        glTranslatef(-42.0f,40.0f,-98.0f);
+        glTranslatef(-42.0f,100.0f,-98.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(4.0f,40.0f,-98.0f);
+        glTranslatef(4.0f,100.0f,-98.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
@@ -642,18 +644,21 @@ void alunoEsp(){
 
         //PERNAS
         glPushMatrix();
-        glTranslatef(0.0f,5.0f,-98.0f);
+        glTranslatef(-30.0f,55.0f,-98.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
 
         glPushMatrix();
-        glTranslatef(10.0f,5.0f,-98.0f);
+        glTranslatef(-8.0f,55.0f,-98.0f);
         glScalef(10.0f,30.0f,10.0f);
         glColor3f(0.0f,1.0f,0.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
+
+
+
     }else if (frame%2==0 &&frame >=110){
         //CORPO
         glPushMatrix();
@@ -665,7 +670,7 @@ void alunoEsp(){
 
         //CABEÇA
         glPushMatrix();
-        glTranslatef(-19.0f,110.0f,-108.0f);
+        glTranslatef(-19.0f,112.0f,-108.0f);
         glScalef(5.0f,5.0f,5.0f);
         glColor3f(1.0f,0.0f,0.0f);
         glutSolidSphere(1.0f,10,10);
@@ -712,7 +717,7 @@ void alunoEsp(){
 
         //CABEÇA
         glPushMatrix();
-        glTranslatef(-19.0f,110.0f,-108.0f);
+        glTranslatef(-19.0f,112.0f,-108.0f);
         glScalef(5.0f,5.0f,5.0f);
         glColor3f(1.0f,0.0f,0.0f);
         glutSolidSphere(1.0f,10,10);
@@ -1166,7 +1171,7 @@ professor();
 
 mesa();
 //inc();
-printf("%d\t%d\n",tempo,frame );
+//printf("%d\t%d\n",tempo,frame );
 }
 
 void display(){
