@@ -22,14 +22,56 @@ void quadro(){
 
     glPopMatrix();
 
-    if (frame < 110 && frame >= 0){
+    if (frame < 110 ){
         glPushMatrix();
         glTranslatef(0.0f,115.0f,-100.0f);
         glScalef(90.0f,5.0f,1.0f);
         glColor3f(1.0f,1.0f,1.0f);
         glutSolidCube(1.0f);
         glPopMatrix();
-    }else if(frame >= 110){
+        if (frame > 30){
+            glPushMatrix();
+            glTranslatef(0.0f,105.0f,-100.0f);
+            glScalef(90.0f,5.0f,1.0f);
+            glColor3f(1.0f,1.0f,1.0f);
+            glutSolidCube(1.0f);
+            glPopMatrix();
+            if (frame > 60){
+                glPushMatrix();
+                glTranslatef(0.0f,95.0f,-100.0f);
+                glScalef(90.0f,5.0f,1.0f);
+                glColor3f(1.0f,1.0f,1.0f);
+                glutSolidCube(1.0f);
+                glPopMatrix();
+            }
+
+        }
+    }else if(frame >= 110 && frame < 130){
+        glPushMatrix();
+        glTranslatef(0.0f,115.0f,-100.0f);
+        glScalef(90.0f,5.0f,1.0f);
+        glColor3f(1.0f,1.0f,1.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(0.0f,105.0f,-100.0f);
+        glScalef(90.0f,5.0f,1.0f);
+        glColor3f(1.0f,1.0f,1.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+
+
+    }else if(frame >= 130 && frame < 150){
+        glPushMatrix();
+        glTranslatef(0.0f,115.0f,-100.0f);
+        glScalef(90.0f,5.0f,1.0f);
+        glColor3f(1.0f,1.0f,1.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+    }else{
 
     }
 
@@ -1182,11 +1224,11 @@ professor();
 
 mesa();
 //inc();
-//printf("%d\t%d\n",tempo,frame );
+printf("%d\t%d\n",tempo,frame );
 }
 
 void display(){
-    for (tempo=0; tempo<10801;tempo++){
+    for (tempo=0; tempo<9000;tempo++){
         if (tempo%60==0){
             frame = frame + 1;
         }
