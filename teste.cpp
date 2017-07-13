@@ -1,14 +1,22 @@
+//#include "header.h"
 #include <GL/gl.h>
 #include <GL/glut.h>
 #include <cmath>
+#include<stdio.h>
 using namespace std;
 
+int tempo = 0;
+int frame = 0;
 
+void inc(){
+    tempo++;
+}
 void quadro(){
+
     glPushMatrix();
     glTranslatef(0.0f,100.0f,-100.0f);
     glScalef(100.0f,40.0f,2.0f);
-    glColor3f(0.0f,1.0f,0.0f);
+    glColor3f(0.5f,0.7f,0.5f);
     glutSolidCube(1.0f);
 //    glTranslatef(0.0f,50.0f,-100.0f);
 
@@ -20,52 +28,146 @@ void quadro(){
 void professor(){
     glColor3f(1.0f,1.0f,0.0f);
 
-    //CORPO
-    glPushMatrix();
-    glTranslatef(-55.0f,95.0f,-95.0f);
-    glScalef(17.5f,25.0f,3.5f);
-    glutSolidCube(1.0f);
-    glPopMatrix();
+    if (frame%2==0 && frame < 60){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-55.0f,95.0f,-95.0f);
+        glScalef(17.5f,25.0f,3.5f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
 
-    //CABEÇA
-    glPushMatrix();
-    glTranslatef(-59.0f,110.0f,-108.0f);
-    glScalef(5.0f,5.0f,5.0f);
-    glColor3f(1.0f,0.5f,0.0f);
-    glutSolidSphere(1.0f,10,10);
-    glPopMatrix();
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-59.0f,110.0f,-108.0f);
+        glScalef(5.0f,5.0f,5.0f);
+        glColor3f(1.0f,0.5f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
 
-    glColor3f(1.0f,1.0f,0.0f);
-    //BRAÇOS
-    glPushMatrix();
-    glTranslatef(-42.0f,110.0f,-88.0f);
-    glScalef(5.0f,15.0f,5.0f);
-    //glColor3f(0.0f,1.0f,0.0f);
-    glutSolidCube(1.0f);
-    glPopMatrix();
+        glColor3f(1.0f,1.0f,0.0f);
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,110.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        //glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
 
-    glPushMatrix();
-    glTranslatef(-62.0f,98.0f,-88.0f);
-    glScalef(5.0f,15.0f,5.0f);
-    //glColor3f(0.0f,1.0f,0.0f);
-    glutSolidCube(1.0f);
-    glPopMatrix();
+        glPushMatrix();
+        glTranslatef(-62.0f,98.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        //glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
 
-    //PERNAS
-    glPushMatrix();
-    glTranslatef(-48.0f,75.0f,-88.0f);
-    glScalef(5.0f,15.0f,5.0f);
-    //glColor3f(0.0f,1.0f,0.0f);
-    glutSolidCube(1.0f);
-    glPopMatrix();
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(-48.0f,75.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        //glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
 
-    glPushMatrix();
-    glTranslatef(-60.0f,75.0f,-88.0f);
-    glScalef(5.0f,15.0f,5.0f);
-    //glColor3f(0.0f,1.0f,0.0f);
-    glutSolidCube(1.0f);
-    glPopMatrix();
+        glPushMatrix();
+        glTranslatef(-60.0f,75.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        //glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if (frame%2==1 && frame<60){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-55.0f,95.0f,-95.0f);
+        glScalef(17.5f,25.0f,3.5f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
 
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-59.0f,110.0f,-108.0f);
+        glScalef(5.0f,5.0f,5.0f);
+        glColor3f(1.0f,0.5f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        glColor3f(1.0f,1.0f,0.0f);
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,110.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        //glColor3f(0.0f,1.0f,0.0f);
+        glRotatef(80.0f,0,1,1);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(-62.0f,98.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        //glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(-48.0f,75.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        //glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(-60.0f,75.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        //glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else{
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-55.0f,95.0f,-95.0f);
+        glScalef(17.5f,25.0f,3.5f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-59.0f,110.0f,-108.0f);
+        glScalef(5.0f,5.0f,5.0f);
+        glColor3f(1.0f,0.5f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        glColor3f(1.0f,1.0f,0.0f);
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,98.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        //glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(-62.0f,98.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        //glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(-48.0f,75.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        //glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(-60.0f,75.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        //glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }
 
 }
 
@@ -102,41 +204,551 @@ void aluno(){
     glutSolidCube(1.0f);
     glPopMatrix();
 
+
 }
 
 void alunoEsp(){
 
-    //CORPO
-    glPushMatrix();
-    glTranslatef(-19.0f,35.0f,-8.0f);
-    glScalef(35.0f,50.0f,7.0f);
-    glColor3f(0.0f,0.0f,0.0f);
-    glutSolidCube(1.0f);
-    glPopMatrix();
+    if (frame<65){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-19.0f,35.0f,-8.0f);
+        glScalef(35.0f,50.0f,7.0f);
+        glColor3f(0.0f,0.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
 
-    //CABEÇA
-    glPushMatrix();
-    glTranslatef(-19.0f,70.0f,-8.0f);
-    glScalef(10.0f,10.0f,10.0f);
-    glColor3f(1.0f,0.0f,0.0f);
-    glutSolidSphere(1.0f,10,10);
-    glPopMatrix();
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-19.0f,70.0f,-8.0f);
+        glScalef(10.0f,10.0f,10.0f);
+        glColor3f(1.0f,0.0f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
 
-    //BRAÇOS
-    glPushMatrix();
-    glTranslatef(-42.0f,40.0f,-8.0f);
-    glScalef(10.0f,30.0f,10.0f);
-    glColor3f(0.0f,1.0f,0.0f);
-    glutSolidCube(1.0f);
-    glPopMatrix();
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,40.0f,-8.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
 
-    glPushMatrix();
-    glTranslatef(4.0f,40.0f,-8.0f);
-    glScalef(10.0f,30.0f,10.0f);
-    glColor3f(0.0f,1.0f,0.0f);
-    glutSolidCube(1.0f);
-    glPopMatrix();
+        glPushMatrix();
+        glTranslatef(4.0f,40.0f,-8.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if(frame >= 65 && frame <70){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-19.0f,40.0f,-18.0f);
+        glScalef(17.5f,25.0f,3.5f);
+        glColor3f(0.0f,0.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
 
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-19.0f,70.0f,-18.0f);
+        glScalef(5.0f,5.0f,5.0f);
+        glColor3f(1.0f,0.0f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,40.0f,-18.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(4.0f,40.0f,-18.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(0.0f,5.0f,-18.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(10.0f,5.0f,-18.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if (frame >=70 && frame < 75){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-19.0f,45.0f,-28.0f);
+        glScalef(35.0f,50.0f,7.0f);
+        glColor3f(0.0f,0.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-19.0f,80.0f,-28.0f);
+        glScalef(10.0f,10.0f,10.0f);
+        glColor3f(1.0f,0.0f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,50.0f,-28.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(4.0f,50.0f,-28.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(0.0f,15.0f,-28.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(10.0f,15.0f,-28.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if (frame >=75 && frame < 80){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-19.0f,50.0f,-38.0f);
+        glScalef(35.0f,50.0f,7.0f);
+        glColor3f(0.0f,0.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-19.0f,90.0f,-38.0f);
+        glScalef(10.0f,10.0f,10.0f);
+        glColor3f(1.0f,0.0f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,50.0f,-38.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(4.0f,50.0f,-38.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(0.0f,25.0f,-38.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(10.0f,25.0f,-38.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if (frame >=80 && frame < 85){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-19.0f,55.0f,-48.0f);
+        glScalef(35.0f,50.0f,7.0f);
+        glColor3f(0.0f,0.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-19.0f,100.0f,-48.0f);
+        glScalef(10.0f,10.0f,10.0f);
+        glColor3f(1.0f,0.0f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,70.0f,-48.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(4.0f,70.0f,-48.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(0.0f,35.0f,-48.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(10.0f,35.0f,-48.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if (frame >=85 && frame < 90){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-19.0f,60.0f,-58.0f);
+        glScalef(35.0f,50.0f,7.0f);
+        glColor3f(0.0f,0.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-19.0f,110.0f,-58.0f);
+        glScalef(10.0f,10.0f,10.0f);
+        glColor3f(1.0f,0.0f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,90.0f,-58.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(4.0f,90.0f,-58.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(0.0f,55.0f,-58.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(10.0f,55.0f,-58.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if (frame >=90 && frame < 95){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-19.0f,65.0f,-68.0f);
+        glScalef(35.0f,50.0f,7.0f);
+        glColor3f(0.0f,0.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-19.0f,120.0f,-68.0f);
+        glScalef(10.0f,10.0f,10.0f);
+        glColor3f(1.0f,0.0f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,100.0f,-68.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(4.0f,100.0f,-68.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(0.0f,65.0f,-68.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(10.0f,65.0f,-68.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if (frame >=95 && frame < 100){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-19.0f,70.0f,-78.0f);
+        glScalef(35.0f,50.0f,7.0f);
+        glColor3f(0.0f,0.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-19.0f,130.0f,-78.0f);
+        glScalef(10.0f,10.0f,10.0f);
+        glColor3f(1.0f,0.0f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,110.0f,-78.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(4.0f,110.0f,-78.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(0.0f,75.0f,-78.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(10.0f,75.0f,-78.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if (frame >=100 && frame < 105){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-19.0f,75.0f,-88.0f);
+        glScalef(35.0f,50.0f,7.0f);
+        glColor3f(0.0f,0.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-19.0f,140.0f,-88.0f);
+        glScalef(10.0f,10.0f,10.0f);
+        glColor3f(1.0f,0.0f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,120.0f,-88.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(4.0f,120.0f,-88.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(0.0f,95.0f,-88.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(10.0f,95.0f,-88.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if (frame >=105 && frame < 110){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-19.0f,95.0f,-98.0f);
+        glScalef(35.0f,50.0f,7.0f);
+        glColor3f(0.0f,0.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-19.0f,70.0f,-98.0f);
+        glScalef(10.0f,10.0f,10.0f);
+        glColor3f(1.0f,0.0f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-42.0f,40.0f,-98.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(4.0f,40.0f,-98.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(0.0f,5.0f,-98.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(10.0f,5.0f,-98.0f);
+        glScalef(10.0f,30.0f,10.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if (frame%2==0 &&frame >=110){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-19.0f,95.0f,-95.0f);
+        glScalef(17.5f,25.0f,3.5f);
+        glColor3f(0.0f,0.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-19.0f,110.0f,-108.0f);
+        glScalef(5.0f,5.0f,5.0f);
+        glColor3f(1.0f,0.0f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        glColor3f(1.0f,1.0f,0.0f);
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-30.0f,110.0f,-88.0f);
+        glScalef(5.0f,8.0f,5.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(-7.5f,98.0f,-88.0f);
+        glScalef(5.0f,8.0f,5.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(-25.0f,75.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(-12.5f,75.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if (frame%2==1 &&frame >=110){
+        //CORPO
+        glPushMatrix();
+        glTranslatef(-19.0f,95.0f,-95.0f);
+        glScalef(17.5f,25.0f,3.5f);
+        glColor3f(0.0f,0.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //CABEÇA
+        glPushMatrix();
+        glTranslatef(-19.0f,110.0f,-108.0f);
+        glScalef(5.0f,5.0f,5.0f);
+        glColor3f(1.0f,0.0f,0.0f);
+        glutSolidSphere(1.0f,10,10);
+        glPopMatrix();
+
+        glColor3f(1.0f,1.0f,0.0f);
+        //BRAÇOS
+        glPushMatrix();
+        glTranslatef(-30.0f,98.0f,-88.0f);
+        glScalef(5.0f,8.0f,5.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(-7.5f,98.0f,-88.0f);
+        glScalef(5.0f,8.0f,5.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        //PERNAS
+        glPushMatrix();
+        glTranslatef(-25.0f,75.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(-12.5f,75.0f,-88.0f);
+        glScalef(5.0f,15.0f,5.0f);
+        glColor3f(0.0f,1.0f,0.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }
 }
 
 void cadeira(){
@@ -298,7 +910,7 @@ void mesa(){
     glutSolidCube(1.0f);
     glPopMatrix();
 
-    cadeira();
+    cadeiraEsp();
 
     //SEGUNDA
     //MESA
@@ -342,7 +954,7 @@ void mesa(){
     glutSolidCube(1.0f);
     glPopMatrix();
 
-    cadeiraEsp();
+    cadeira();
 
 
 
@@ -553,10 +1165,15 @@ quadro();
 professor();
 
 mesa();
-
+//inc();
+printf("%d\t%d\n",tempo,frame );
 }
 
 void display(){
+    for (tempo=0; tempo<10801;tempo++){
+        if (tempo%60==0){
+            frame = frame + 1;
+        }
     glClear (GL_COLOR_BUFFER_BIT);
 
     /*	ir para matriz Modelview para podermos fazer as transformações	*/
@@ -569,8 +1186,8 @@ void display(){
     //glRotatef(90.0f,0,1,0);
 
     sala();
-
     glFlush();
+}
 }
 
 void init (void){
