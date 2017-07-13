@@ -1225,7 +1225,7 @@ professor();
 
 mesa();
 //inc();
-printf("%d\t%d\n",tempo,frame );
+//printf("%d\t%d\n",tempo,frame );
 }
 
 void display(){
