@@ -22,6 +22,17 @@ void quadro(){
 
     glPopMatrix();
 
+    if (frame < 110 && frame >= 0){
+        glPushMatrix();
+        glTranslatef(0.0f,115.0f,-100.0f);
+        glScalef(90.0f,5.0f,1.0f);
+        glColor3f(1.0f,1.0f,1.0f);
+        glutSolidCube(1.0f);
+        glPopMatrix();
+    }else if(frame >= 110){
+
+    }
+
 }
 
 
