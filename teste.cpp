@@ -5,8 +5,9 @@
 #include<stdio.h>
 using namespace std;
 
-int tempo = 0;
+int tempo;
 int frame = 0;
+static int flag = 0;
 
 void inc(){
     tempo++;
@@ -1228,7 +1229,8 @@ printf("%d\t%d\n",tempo,frame );
 }
 
 void display(){
-    for (tempo=0; tempo<9000;tempo++){
+    if (flag == 0){
+    for (tempo=0; tempo<9001;tempo++){
         if (tempo%60==0){
             frame = frame + 1;
         }
@@ -1245,7 +1247,9 @@ void display(){
 
     sala();
     glFlush();
-}
+    }
+    flag = 1;
+    }
 }
 
 void init (void){
